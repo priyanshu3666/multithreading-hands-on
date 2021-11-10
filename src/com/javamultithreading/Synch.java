@@ -1,15 +1,16 @@
 package com.javamultithreading;
 
-// THis  program is not  synchronised
+// This  program is not  synchronised  without synchronised keyword
 class CallMe {
-    void call(String msg){
-        System.out.println(" [ " + msg);
+    //using synchronised keyword
+    synchronized  void call(String msg){
+        System.out.print(" [ " + msg);
         try {
             Thread.sleep(1000);
         }
         catch (InterruptedException exception)
         {
-            System.out.println("Interrupted");
+            System.out.print("Interrupted");
         }
         System.out.println(" ] ");
     }
