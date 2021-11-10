@@ -20,8 +20,8 @@ class  Caller implements  Runnable{
     String msg;
     CallMe target;
     Thread thread;
-    public  Caller(CallMe targ, String str ){
-        target = targ;
+    public  Caller(CallMe tar, String str ){
+        target = tar;
         msg = str;
         thread = new Thread(this);
     }
@@ -32,7 +32,7 @@ class  Caller implements  Runnable{
     }
 }
 
-public class Synch {
+public class Sync {
     public static void main(String[] args) {
         CallMe target = new CallMe();
         Caller obj1 = new Caller(target,"Hello");
